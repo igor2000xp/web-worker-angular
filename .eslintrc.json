@@ -1,0 +1,115 @@
+{
+  "root": true,
+  "ignorePatterns": [
+    "projects/**/*"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.ts"
+      ],
+      "parserOptions": {
+        "project": [
+          "tsconfig.*?.json"
+        ],
+        "createDefaultProgram": true
+      },
+      "extends": [
+        "plugin:import/recommended",
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@angular-eslint/recommended",
+        "plugin:@angular-eslint/template/process-inline-templates",
+        "airbnb-typescript/base",
+        "plugin:prettier/recommended"
+      ],
+      "rules": {
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "type": "attribute",
+            "prefix": "app",
+            "style": "camelCase"
+          }
+        ],
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": "element",
+            "prefix": "app",
+            "style": "kebab-case"
+          }
+        ],
+        "import/no-extraneous-dependencies": [
+          "error",
+          {
+            "devDependencies": true
+          }
+        ]
+      }
+    },
+    {
+      "files": [
+        "*.component.html"
+      ],
+      "extends": [
+        "plugin:@angular-eslint/template/recommended"
+      ],
+      "rules": {
+        "max-len": [
+          "warn",
+          {
+            "code": 140
+          }
+        ]
+      }
+    },
+    {
+      "files": [
+        "*.component.ts"
+      ],
+      "extends": [
+        "plugin:@angular-eslint/template/process-inline-templates"
+      ]
+    },
+    {
+      "files": [
+        "*.html"
+      ],
+      "extends": [
+        "plugin:@angular-eslint/template/recommended",
+        "plugin:@angular-eslint/template/accessibility"
+      ],
+      "rules": {}
+    },
+    {
+      "files": [
+        "*.ts"
+      ],
+      "extends": [
+        "plugin:@ngrx/recommended"
+      ]
+    },
+    {
+      "files": [
+        "src/**/*.spec.ts",
+        "src/**/*.d.ts"
+      ],
+      // Jasmine rules
+      "extends": [
+        "plugin:jasmine/recommended"
+      ],
+      // Plugin to run Jasmine rules
+      "plugins": [
+        "jasmine"
+      ],
+      "env": {
+        "jasmine": true
+      },
+      // Turn off 'no-unused-vars' rule
+      "rules": {
+        "@typescript-eslint/no-unused-vars": "off"
+      }
+    }
+  ]
+}

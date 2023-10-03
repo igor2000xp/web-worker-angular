@@ -1,7 +1,7 @@
 #bin/bash
 
 ng version
-ng new youtube-client --directory ./
+ng new web-worker-angular --directory ./
 
 npm install @angular/material @angular/cdk
 
