@@ -1,12 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { generateFibonacci } from './utils/fibonacci';
+
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'web-worker-angular';
+
+  ngOnInit(): void {
+    console.log(generateFibonacci(20));
+  }
 }
 
 if (typeof Worker !== 'undefined') {
