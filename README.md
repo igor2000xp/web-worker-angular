@@ -1,3 +1,10 @@
+# Description the Application
+![Alt text](image.png)
+
+This application efficiently computes Fibonacci numbers through the utilization of both Web Workers and Shared Workers. This approach ensures rapid results by capitalizing on parallel processing threads. Without employing this technique, direct calculations would incur significant timeouts. 
+
+To experience the enhanced performance, you can uncomment the line __generateFibonacci0(45);__ in the __app.component.ts__ file.
+
 # web-worker-angular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.1.
