@@ -10,7 +10,7 @@ importScripts(
 );
 
 addEventListener('message', (evt) => {
-  console.log(`Action is: `, evt.data.action);
+  console.log(`Worker action is: `, evt.data.action, ', param =', evt.data.param);
 
   if (evt.data.action === 'generateFibonacci') {
     const response = generateFibonacci(evt.data.param);

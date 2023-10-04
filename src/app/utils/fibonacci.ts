@@ -14,7 +14,7 @@ declare var _: any;
 // }
 
 export const generateFibonacci = (n: number, arr = new Array(n - 1)) => {
-  console.log(_.map((x: any) => x));
+  // console.log(_.map((x: any) => x));
   const res = [
     arr,
     _.reduce(
@@ -25,6 +25,6 @@ export const generateFibonacci = (n: number, arr = new Array(n - 1)) => {
     ),
 
   ];
-  console.log(res);
+  // console.log(res);
   return res;
 };
